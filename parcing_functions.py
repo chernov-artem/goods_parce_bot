@@ -43,7 +43,14 @@ def get_proc():
             for i in data:
                 file.write(i)
             print("файл записан")
-        print(data)
+        list_goods = []
+        with open('table_good.txt', 'r', encoding='utf-8') as file:
+            while True:
+                line = file.readline()
+                if not line:
+                    break
+                list_goods.append(line)
+        print(list)
 
 
 
