@@ -45,6 +45,27 @@ async def button_5HDD(message: types.Message):
     await bot.send_message(message.from_user.id, "5 жесткий диск:\n" +table_file.hdd)
     await message.delete()
 
+async def button_6videocard(message: types.Message):
+    await bot.send_message(message.from_user.id, "6 видеокарта:\n" +table_file.videocard)
+    await message.delete()
+
+async def button_7matrix(message: types.Message):
+    await bot.send_message(message.from_user.id, "7 матрица дисплея:\n" +table_file.matrix)
+    await message.delete()
+
+async def button_8fingerprint(message: types.Message):
+    await bot.send_message(message.from_user.id, "8 сканер отпечатка пальца:\n" +table_file.fingerprint)
+    await message.delete()
+
+async def button_9keyboard_backlit(message: types.Message):
+    await bot.send_message(message.from_user.id, "9 Подсветка клавиатуры:\n" +table_file.keyboard_backlit)
+    await message.delete()
+
+async def button_10case_material(message: types.Message):
+    await bot.send_message(message.from_user.id, "10 материал корпуса:\n" +table_file.case_material)
+    await message.delete()
+
+
 def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(commands_start, commands=['start'])
     dp.register_message_handler(button1, commands=['Кнопка1'])
@@ -54,4 +75,9 @@ def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(button_3os, commands=['3ОС'])
     dp.register_message_handler(button_4DDR, commands=['4ОПЕР_память'])
     dp.register_message_handler(button_5HDD, commands=['5Жесткий_диск'])
+    dp.register_message_handler(button_6videocard, commands=['6видеокарта'])
+    dp.register_message_handler(button_7matrix, commands=['7матрица_дисп'])
+    dp.register_message_handler(button_8fingerprint, commands=['8сканер_отпеч'])
+    dp.register_message_handler(button_9keyboard_backlit, commands=['9подсветка_клав'])
+    dp.register_message_handler(button_10case_material, commands=['10материал_корп'])
 
