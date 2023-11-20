@@ -4,7 +4,7 @@ from aiogram import types, Dispatcher
 
 import table_file
 from create_bot import dp, bot
-from keyboards.client_kb import kb_client
+from keyboards.client_kb import kb_client, kb_notebook1, kb_notebook2
 from aiogram.types import ReplyKeyboardRemove
 import parcing_functions
 
@@ -17,12 +17,13 @@ async def commands_start(message : types.Message):
         await message.reply("Общение с ботов в ЛС. Напишите ему http://t.me/spb97192568_test_pizza_bot")
 
 async def button1(messgage : types.Message):
-    await bot.send_message(messgage.from_user.id, "Нажали кнопку 1")
-    await parcing_functions.open_page("82X70045RK")
+    await bot.send_message(messgage.from_user.id, "Кнопки 1-5", reply_markup=kb_notebook1)
+    # await parcing_functions.open_page("82X70045RK")
     await messgage.delete()
 
 async def button2(message: types.Message):
-    await parcing_functions.get_proc()
+    await bot.send_message(message.from_user.id, "кнопки 6-10", reply_markup=kb_notebook2)
+    # await parcing_functions.get_proc()
     await message.delete()
 
 async def button_1screen(message: types.Message):
