@@ -24,7 +24,7 @@ b18 = KeyboardButton('/16проц_частота')
 b19 = KeyboardButton('/17видеокарта_полн')
 b20 = KeyboardButton('/18типа_памяти')
 b21 = KeyboardButton('/19частота_памяти')
-b22 = KeyboardButton('/20')
+b22 = KeyboardButton('/20конфигурация_накопит')
 # b2 = KeyboardButton('/2')
 
 

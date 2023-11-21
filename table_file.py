@@ -37,7 +37,8 @@ wdh = list_goods[49]
 proc_freq = list_goods[2].split(' ')[12]
 ddr_type = list_goods[8][16:20]
 ddr_freq = list_goods[8][-4:]
+storage_configuration = list_goods[14].split(' ')[1]
 
 
-print(ddr_freq)
+print(storage_configuration)
 print(list_goods[128])
