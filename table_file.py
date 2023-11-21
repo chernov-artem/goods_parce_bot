@@ -28,6 +28,12 @@ if list_goods[138][:2] == 'PC':
     case_material = 'пластик'
 else:
     case_material = list_goods[138]
+sensor_screen = list_goods[39]
+case_color = list_goods[43]
+weight = list_goods[51]
+wdh = list_goods[49]
+proc_freq = list_goods[2].split(' ')[12]
 
-print(case_material)
+
+print(proc_freq)
 print(list_goods[128])
