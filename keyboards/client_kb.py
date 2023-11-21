@@ -1,7 +1,7 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 bstart = KeyboardButton('/start')
-b001 = KeyboardButton('/')
+b001 = KeyboardButton('/Кнопка1')
 b002 = KeyboardButton('/Кнопка2')
 b003 = KeyboardButton('/Кнопка3')
 b004 = KeyboardButton('/Кнопка4')
@@ -21,9 +21,9 @@ b15 = KeyboardButton('/13вес')
 b16 = KeyboardButton('/14габариты_ШхДхВ')
 b17 = KeyboardButton('/2проц')
 b18 = KeyboardButton('/16проц_частота')
-b19 = KeyboardButton('/17')
-b20 = KeyboardButton('/18')
-b21 = KeyboardButton('/19')
+b19 = KeyboardButton('/17видеокарта_полн')
+b20 = KeyboardButton('/18типа_памяти')
+b21 = KeyboardButton('/19частота_памяти')
 b22 = KeyboardButton('/20')
 # b2 = KeyboardButton('/2')
 
