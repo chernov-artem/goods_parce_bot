@@ -58,11 +58,10 @@ proc_freq = list_goods[2].split(' ')[12]
 ddr_type = list_goods[8][16:20]
 ddr_freq = list_goods[8][-4:]
 storage_configuration = list_goods[14].split(' ')[1]
-interfaces = str
-# print(find_interval("Standard Ports", "Security Chip"))
-find_char("Standard Ports", "Security Chip")
+interfaces = find_char("Standard Ports", "Security Chip")
+wireless_connection = list_goods[61]
+wifi = " ".join(x for x in list_goods[61].split(' ')[:2])[:-1] #распаковка списка, соединенная пробелом
+bluetooth = list_goods[61].split(' ')[-1]
 
 
-
-
-print(interfaces)
+print(bluetooth)

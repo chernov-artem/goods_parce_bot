@@ -66,6 +66,12 @@ async def button_10case_material(message: types.Message):
     await bot.send_message(message.from_user.id, "10 материал корпуса:\n" +table_file.case_material)
     await message.delete()
 
+async def button_22wireless_connection(message: types.Message):
+    await bot.send_message(message.from_user.id, "22 беспроводная связь.\nпиши:\nWi-Fi и Bluetooth" +
+                                                 "\nследующая строка просто для твоей информации " + table_file.wireless_connection +
+                           "\n Версия bluetooth " + table_file.bluetooth + "\n Версия wi-fi " + table_file.wifi)
+    await message.delete()
+
 
 def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(commands_start, commands=['start'])
@@ -81,4 +87,5 @@ def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(button_8fingerprint, commands=['8сканер_отпеч'])
     dp.register_message_handler(button_9keyboard_backlit, commands=['9подсветка_клав'])
     dp.register_message_handler(button_10case_material, commands=['10материал_корп'])
+    dp.register_message_handler(button_22wireless_connection, commands=['22беспр_связь'])
 
