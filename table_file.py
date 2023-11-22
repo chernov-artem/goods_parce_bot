@@ -4,12 +4,18 @@ def find_interval(onset: str, end: str) -> tuple:
     for i in range(len(list_goods)):
         if list_goods[i] == str(onset):
             onset_index = i
-            print("onset = ", onset_index)
         if list_goods[i] == str(end):
             end_index = i
-            print("end = ", end_index)
     return (onset_index, end_index)
 
+def find_char(onset: str, end: str) -> str:
+    "функция возвращает строку между начальным и конечным элементом списка"
+    interval = find_interval(onset, end)
+    onset_index, end_index = interval[0], interval[1]
+    result = ''
+    for i in range(onset_index + 1, end_index):
+        result = result + str(list_goods[i]) + "\n"
+    return result
 
 list_goods = []
 with open('table_good.txt', 'r', encoding='utf-8') as file:
@@ -53,7 +59,8 @@ ddr_type = list_goods[8][16:20]
 ddr_freq = list_goods[8][-4:]
 storage_configuration = list_goods[14].split(' ')[1]
 interfaces = str
-print(find_interval("Standard Ports", "Security Chip"))
+# print(find_interval("Standard Ports", "Security Chip"))
+find_char("Standard Ports", "Security Chip")
 
 
 
