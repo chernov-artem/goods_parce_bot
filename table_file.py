@@ -1,3 +1,16 @@
+def find_interval(onset: str, end: str) -> tuple:
+    "функция поиска интервала между элементами списка"
+    onset_index, end_index = 0, 0
+    for i in range(len(list_goods)):
+        if list_goods[i] == str(onset):
+            onset_index = i
+            print("onset = ", onset_index)
+        if list_goods[i] == str(end):
+            end_index = i
+            print("end = ", end_index)
+    return (onset_index, end_index)
+
+
 list_goods = []
 with open('table_good.txt', 'r', encoding='utf-8') as file:
     while True:
@@ -5,9 +18,10 @@ with open('table_good.txt', 'r', encoding='utf-8') as file:
         if not line:
             break
         list_goods.append(line[:-1])
+print(len(list_goods))
 print(list_goods)
 processor = list_goods[2].split(",")[0] + list_goods[2].split(',')[1][:3] + " ядер"
-screen = list_goods[128].split(' ')[0] + " " +  list_goods[128].split(' ')[2][1:-1]
+screen = list_goods[37].split(' ')[0] + " " +  list_goods[37].split(' ')[2][1:-1]
 oper_sist = list_goods[54]
 ddr = list_goods[8][:4]
 hdd = " ".join(str(x) for x in list_goods[14].split(' ')[:3]) # тут я распаковываю список из первых трех элементов строки, соединяя их пробелом
@@ -18,18 +32,18 @@ if list_goods[4].split(' ')[:1][0] == "Integrated":
 else:
     videocard = "дискретная"
     videocard_full = list_goods[4]
-matrix = list_goods[128].split(' ')[3]
+matrix = list_goods[37].split(' ')[3]
 fingerprint = list_goods[72]
 keyboard_backlit = str
-if list_goods[132].split(' ')[:1][0] == 'Non-backlit,':
+if list_goods[41].split(' ')[:1][0] == 'Non-backlit,':
     keyboard_backlit = 'без подсветки'
 else:
-    keyboard_backlit = list_goods[132]
+    keyboard_backlit = list_goods[41]
 case_material = str
-if list_goods[138][:2] == 'PC':
+if list_goods[47][:2] == 'PC':
     case_material = 'пластик'
 else:
-    case_material = list_goods[138]
+    case_material = list_goods[47]
 sensor_screen = list_goods[39]
 case_color = list_goods[43]
 weight = list_goods[51]
@@ -38,7 +52,10 @@ proc_freq = list_goods[2].split(' ')[12]
 ddr_type = list_goods[8][16:20]
 ddr_freq = list_goods[8][-4:]
 storage_configuration = list_goods[14].split(' ')[1]
+interfaces = str
+print(find_interval("Standard Ports", "Security Chip"))
 
 
-print(storage_configuration)
-print(list_goods[128])
+
+
+print(interfaces)
