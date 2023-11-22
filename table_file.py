@@ -54,7 +54,7 @@ sensor_screen = list_goods[39]
 case_color = list_goods[43]
 weight = list_goods[51]
 wdh = list_goods[49]
-proc_freq = list_goods[2].split(' ')[12]
+proc_freq = list_goods[2].split(' ')[12][:-1]
 ddr_type = list_goods[8][16:20]
 ddr_freq = list_goods[8][-4:]
 storage_configuration = list_goods[14].split(' ')[1]
@@ -62,6 +62,11 @@ interfaces = find_char("Standard Ports", "Security Chip")
 wireless_connection = list_goods[61]
 wifi = " ".join(x for x in list_goods[61].split(' ')[:2])[:-1] #распаковка списка, соединенная пробелом
 bluetooth = list_goods[61].split(' ')[-1]
+optical = list_goods[22]
+width = str(round(float(wdh.split(' ')[0]) / 10, 1)) + " см" # сделал сокращение до 1 знака после запятой
+depth = str(round(float(wdh.split(' ')[2]) / 10, 1)) + " см" # сделал сокращение до 1 знака после запятой
+height = str(round(float(wdh.split(' ')[4]) / 10, 1)) + " см" # сделал сокращение до 1 знака после запятой
+wdn_cm = width + ' ' + depth + ' ' + height
 
-
-print(bluetooth)
+print(wdn_cm)
+print(wdh)
