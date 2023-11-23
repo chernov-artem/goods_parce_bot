@@ -1,6 +1,7 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 bstart = KeyboardButton('/start')
+button0 = KeyboardButton('Загрузить')
 b001 = KeyboardButton('/тов1_5')
 b002 = KeyboardButton('/тов6_10')
 b003 = KeyboardButton('/тов11_15')
@@ -42,7 +43,7 @@ kb_notebook3 = ReplyKeyboardMarkup(resize_keyboard=True)
 kb_notebook4 = ReplyKeyboardMarkup(resize_keyboard=True)
 kb_notebook5 = ReplyKeyboardMarkup(resize_keyboard=True)
 
-kb_client.row(b001, b002, b003).row(b004, b005).add(bstart)
+kb_client.row(b001, b002, b003).row(b004, b005).add(bstart).add(button0)
 kb_notebook1.row(b1, b2).row(b3, b4, b5).add(bstart)
 kb_notebook2.row(b6, b7).row(b8, b9, b10).add(bstart)
 kb_notebook3.row(b11, b12).row(b13, b14, b15).add(bstart)

@@ -12,6 +12,16 @@ import parcing_functions
 class FSM_goods(StatesGroup):
     good = State()
 
+async def cm_start(message : types.Message):
+    await bot.send_message("функция работает")
+    await FSM_goods.good.set()
+    await message.reply("загрузи фото")
+
+async def load_good(message: types.Message):
+    good = message.text
+    await message.reply("товар загружен ", good)
+
+
 async def commands_start(message : types.Message):
     try:
         await bot.send_message(message.from_user.id, 'Готов к работе', reply_markup=kb_client)
@@ -145,6 +155,8 @@ async def button_25height(message: types.Message):
 
 def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(commands_start, commands=['start'])
+    dp.register_message_handler(cm_start, commands=['Загрузить'], state=None)
+    dp.register_message_handler(load_good, state=FSM_goods.good)
     dp.register_message_handler(button1, commands=['тов1_5'])
     dp.register_message_handler(button2, commands=['тов6_10'])
     dp.register_message_handler(button3, commands=['тов11_15'])
