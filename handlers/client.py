@@ -1,5 +1,6 @@
 import time
-
+from aiogram.dispatcher import FSMContext
+from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram import types, Dispatcher
 
 import table_file
@@ -8,6 +9,8 @@ from keyboards.client_kb import *
 from aiogram.types import ReplyKeyboardRemove
 import parcing_functions
 
+class FSM_goods(StatesGroup):
+    good = State()
 
 async def commands_start(message : types.Message):
     try:
