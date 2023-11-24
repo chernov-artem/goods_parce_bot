@@ -17,6 +17,19 @@ def find_char(onset: str, end: str) -> str:
         result = result + str(list_goods[i]) + "\n"
     return result
 
+def find_parametr(name: str) -> int:
+    i = 0
+    print('name = ', name)
+    with open('table_good.txt', 'r', encoding='utf-8') as file:
+
+        while True:
+            line = file.readline()
+            i += 1
+            if not line:
+                break
+            if line == name:
+                return i
+
 list_goods = []
 with open('table_good.txt', 'r', encoding='utf-8') as file:
     while True:
@@ -68,5 +81,7 @@ depth = str(round(float(wdh.split(' ')[2]) / 10, 1)) + " см" # сделал с
 height = str(round(float(wdh.split(' ')[4]) / 10, 1)) + " см" # сделал сокращение до 1 знака после запятой
 wdn_cm = width + ' ' + depth + ' ' + height
 
-print(wdn_cm)
+print('res = ', find_parametr('Processor'))
+
+print(processor)
 print(wdh)

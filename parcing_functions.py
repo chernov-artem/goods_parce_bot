@@ -18,7 +18,9 @@ driver = webdriver.Chrome(options=options)
 
 url = 'https://psref.lenovo.com/'
 
-def open_page(model):
+
+def open_page(model: str) -> str:
+    "функция получает название модели и возвращает url с описанием этой модели на сайте производителя"
     print("открываю урл")
     driver.get(url)
     time.sleep(1)
@@ -28,8 +30,10 @@ def open_page(model):
     search.click()
     search.send_keys(model)
     search.send_keys(Keys.RETURN)
-    driver.implicitly_wait(3)
-    get_proc()
+    driver.implicitly_wait(7)
+    good_url = driver.current_url
+    return good_url
+
 
 def get_proc():
     "временная функция, парсит страницу по ссылке и записывает нужные данные в файл"
@@ -61,10 +65,12 @@ def get_proc():
     except Exception as ex:
         print(ex)
 
-def get_good_data(url: str):
+
+def get_good_data(model: str) -> None:
     "парсит страницу по ссылке и записывает нужные данные в файл"
-    driver.get(url)
-    driver.implicitly_wait(3)
+    driver.get(open_page(model))
+    driver.implicitly_wait(7)
+    time.sleep(5)
     try:
         # proc = driver.find_element(By.XPATH, '//*[@id="as_SpecData"]/tbody[1]/tr[2]/td[2]/div/text()')
         proc = driver.find_element(By.XPATH, '//*[@id="as_SpecData"]')
@@ -90,7 +96,10 @@ def get_good_data(url: str):
     except Exception as ex:
         print(ex)
 
-get_good_data('https://psref.lenovo.com/Detail/IdeaPad_Slim_3_15IRU8?M=82X70045RK')
+
+get_good_data('82X70045RK')
+# open_page('82X70045RK')
+# open_page('21C10000UE')
 
 # driver.get(url)
 # driver.implicitly_wait(7)
