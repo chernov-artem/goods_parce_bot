@@ -12,14 +12,7 @@ import parcing_functions
 class FSM_goods(StatesGroup):
     good = State()
 
-async def cm_start(message : types.Message):
-    await bot.send_message("функция работает")
-    await FSM_goods.good.set()
-    await message.reply("загрузи фото")
 
-async def load_good(message: types.Message):
-    good = message.text
-    await message.reply("товар загружен ", good)
 
 
 async def commands_start(message : types.Message):
@@ -28,6 +21,17 @@ async def commands_start(message : types.Message):
         await message.delete()
     except:
         await message.reply("Общение с ботов в ЛС. Напишите ему http://t.me/spb97192568_test_pizza_bot")
+
+async def cm_start(message : types.Message):
+    await bot.send_message(message.from_user.id, "функция работает")
+    await FSM_goods.good.set()
+
+async def load_good(message: types.Message, state: FSMContext):
+    async with state.proxy() as data:
+        data['good'] = message.text
+    await message.reply("товар загружен " + data["good"])
+    print(data['good'])
+    await state.finish()
 
 async def button1(messgage : types.Message):
     await bot.send_message(messgage.from_user.id, "тов1_5", reply_markup=kb_notebook1)
@@ -63,15 +67,15 @@ async def button_3os(message: types.Message):
     await message.delete()
 
 async def button_4DDR(message: types.Message):
-    await bot.send_message(message.from_user.id, "4 оперативная память:\n" +table_file.ddr)
+    await bot.send_message(message.from_user.id, "4 оперативная память:\n" + table_file.ddr)
     await message.delete()
 
 async def button_5HDD(message: types.Message):
-    await bot.send_message(message.from_user.id, "5 жесткий диск:\n" +table_file.hdd)
+    await bot.send_message(message.from_user.id, "5 жесткий диск:\n" + table_file.hdd)
     await message.delete()
 
 async def button_6videocard(message: types.Message):
-    await bot.send_message(message.from_user.id, "6 видеокарта:\n" +table_file.videocard)
+    await bot.send_message(message.from_user.id, "6 видеокарта:\n" + table_file.videocard)
     await message.delete()
 
 async def button_7matrix(message: types.Message):
@@ -79,51 +83,51 @@ async def button_7matrix(message: types.Message):
     await message.delete()
 
 async def button_8fingerprint(message: types.Message):
-    await bot.send_message(message.from_user.id, "8 сканер отпечатка пальца:\n" +table_file.fingerprint)
+    await bot.send_message(message.from_user.id, "8 сканер отпечатка пальца:\n" + table_file.fingerprint)
     await message.delete()
 
 async def button_9keyboard_backlit(message: types.Message):
-    await bot.send_message(message.from_user.id, "9 Подсветка клавиатуры:\n" +table_file.keyboard_backlit)
+    await bot.send_message(message.from_user.id, "9 Подсветка клавиатуры:\n" + table_file.keyboard_backlit)
     await message.delete()
 
 async def button_10case_material(message: types.Message):
-    await bot.send_message(message.from_user.id, "10 материал корпуса:\n" +table_file.case_material)
+    await bot.send_message(message.from_user.id, "10 материал корпуса:\n" + table_file.case_material)
     await message.delete()
 
 async def button_11sensor_screen(message: types.Message):
-    await bot.send_message(message.from_user.id, "11 Сенсорный экран:\n" +table_file.sensor_screen)
+    await bot.send_message(message.from_user.id, "11 Сенсорный экран:\n" + table_file.sensor_screen)
     await message.delete()
 
 async def button_12case_color(message: types.Message):
-    await bot.send_message(message.from_user.id, "12 Цвет корпуса:\n" +table_file.case_color)
+    await bot.send_message(message.from_user.id, "12 Цвет корпуса:\n" + table_file.case_color)
     await message.delete()
 
 async def button_13weight(message: types.Message):
-    await bot.send_message(message.from_user.id, "13 Вес:\n" +table_file.weight)
+    await bot.send_message(message.from_user.id, "13 Вес:\n" + table_file.weight)
     await message.delete()
 
 async def button_15proc_frequency(message: types.Message):
-    await bot.send_message(message.from_user.id, "15 Частота процессора:\n" +table_file.proc_freq)
+    await bot.send_message(message.from_user.id, "15 Частота процессора:\n" + table_file.proc_freq)
     await message.delete()
 
 async def button_16video_card_full(message: types.Message):
-    await bot.send_message(message.from_user.id, "16 Видеокарта:\n" +table_file.videocard_full)
+    await bot.send_message(message.from_user.id, "16 Видеокарта:\n" + table_file.videocard_full)
     await message.delete()
 
 async def button_17ddr_type(message: types.Message):
-    await bot.send_message(message.from_user.id, "17 Тип памяти:\n" +table_file.ddr_type)
+    await bot.send_message(message.from_user.id, "17 Тип памяти:\n" + table_file.ddr_type)
     await message.delete()
 
 async def button_18ddr_freq(message: types.Message):
-    await bot.send_message(message.from_user.id, "18 Частота памяти:\n" +table_file.ddr_freq)
+    await bot.send_message(message.from_user.id, "18 Частота памяти:\n" + table_file.ddr_freq)
     await message.delete()
 
 async def button_19storage_conf(message: types.Message):
-    await bot.send_message(message.from_user.id, "19 Конфигурация накопителей:\n" +table_file.storage_configuration)
+    await bot.send_message(message.from_user.id, "19 Конфигурация накопителей:\n" + table_file.storage_configuration)
     await message.delete()
 
 async def button_20interfaces(message: types.Message):
-    await bot.send_message(message.from_user.id, "20 Интерфейсы:\n" +table_file.interfaces)
+    await bot.send_message(message.from_user.id, "20 Интерфейсы:\n" + table_file.interfaces)
     await message.delete()
 
 async def button_21wireless_connection(message: types.Message):
@@ -133,20 +137,22 @@ async def button_21wireless_connection(message: types.Message):
     await message.delete()
 
 async def button_22optical(message: types.Message):
-    await bot.send_message(message.from_user.id, "22 Оптический привод:\n" +table_file.optical)
+    await bot.send_message(message.from_user.id, "22 Оптический привод:\n" + table_file.optical)
     await message.delete()
 
 async def button_23width(message: types.Message):
-    await bot.send_message(message.from_user.id, "23 Ширина:\n" +table_file.width)
+    await bot.send_message(message.from_user.id, "23 Ширина:\n" + table_file.width)
     await message.delete()
 
 async def button_24depth(message: types.Message):
-    await bot.send_message(message.from_user.id, "24 Глубина(длинна):\n" +table_file.depth)
+    await bot.send_message(message.from_user.id, "24 Глубина(длинна):\n" + table_file.depth)
     await message.delete()
 
 async def button_25height(message: types.Message):
-    await bot.send_message(message.from_user.id, "25 Высота:\n" +table_file.height)
+    await bot.send_message(message.from_user.id, "25 Высота:\n" + table_file.height)
     await message.delete()
+
+
 
 
 
@@ -155,7 +161,7 @@ async def button_25height(message: types.Message):
 
 def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(commands_start, commands=['start'])
-    dp.register_message_handler(cm_start, commands=['Загрузить'], state=None)
+    dp.register_message_handler(cm_start, commands=['Загрузить'])
     dp.register_message_handler(load_good, state=FSM_goods.good)
     dp.register_message_handler(button1, commands=['тов1_5'])
     dp.register_message_handler(button2, commands=['тов6_10'])

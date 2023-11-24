@@ -32,12 +32,16 @@ def open_page(model):
     get_proc()
 
 def get_proc():
+    "временная функция, парсит страницу по ссылке и записывает нужные данные в файл"
     driver.get("https://psref.lenovo.com/Detail/IdeaPad_Slim_3_15IRU8?M=82X70045RK")
     driver.implicitly_wait(3)
     try:
         # proc = driver.find_element(By.XPATH, '//*[@id="as_SpecData"]/tbody[1]/tr[2]/td[2]/div/text()')
         proc = driver.find_element(By.XPATH, '//*[@id="as_SpecData"]')
         data = proc.text
+        with open("table_good.txt", 'w', encoding='utf-8') as file:
+            "обнуляем файл"
+            file.write('')
         with open('table_good.txt', 'a', encoding='utf-8') as file:
             print('записываю файл')
             for i in data:
@@ -56,6 +60,37 @@ def get_proc():
 
     except Exception as ex:
         print(ex)
+
+def get_good_data(url: str):
+    "парсит страницу по ссылке и записывает нужные данные в файл"
+    driver.get(url)
+    driver.implicitly_wait(3)
+    try:
+        # proc = driver.find_element(By.XPATH, '//*[@id="as_SpecData"]/tbody[1]/tr[2]/td[2]/div/text()')
+        proc = driver.find_element(By.XPATH, '//*[@id="as_SpecData"]')
+        data = proc.text
+        with open("table_good.txt", 'w', encoding='utf-8') as file:
+            "обнуляем файл"
+            file.write('')
+        with open('table_good.txt', 'a', encoding='utf-8') as file:
+            print('записываю файл')
+            for i in data:
+                file.write(i)
+            print("файл записан")
+        list_goods = []
+        with open('table_good.txt', 'r', encoding='utf-8') as file:
+            while True:
+                line = file.readline()
+                if not line:
+                    break
+                list_goods.append(line)
+        print(list)
+
+
+    except Exception as ex:
+        print(ex)
+
+get_good_data('https://psref.lenovo.com/Detail/IdeaPad_Slim_3_15IRU8?M=82X70045RK')
 
 # driver.get(url)
 # driver.implicitly_wait(7)

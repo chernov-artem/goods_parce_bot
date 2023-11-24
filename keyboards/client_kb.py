@@ -1,7 +1,7 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 bstart = KeyboardButton('/start')
-button0 = KeyboardButton('Загрузить')
+button0 = KeyboardButton('/Загрузить')
 b001 = KeyboardButton('/тов1_5')
 b002 = KeyboardButton('/тов6_10')
 b003 = KeyboardButton('/тов11_15')
