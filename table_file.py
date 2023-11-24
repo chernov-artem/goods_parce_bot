@@ -45,45 +45,62 @@ tmp_ind = find_parametr('Display')
 screen = list_goods[tmp_ind].split(' ')[0] + " " +  list_goods[tmp_ind].split(' ')[2][1:-1]
 tmp_ind = find_parametr('Operating System')
 oper_sist = list_goods[tmp_ind]
-ddr = list_goods[8][:4]
-hdd = " ".join(str(x) for x in list_goods[14].split(' ')[:3]) # тут я распаковываю список из первых трех элементов строки, соединяя их пробелом
+tmp_ind = find_parametr('Memory')
+ddr = ' '.join(str(x) for x in list_goods[tmp_ind].split(' ')[:2])
+tmp_ind = find_parametr('Storage')
+hdd = " ".join(str(x) for x in list_goods[tmp_ind].split(' ')[:3]) # тут я распаковываю список из первых трех элементов строки, соединяя их пробелом
+tmp_ind = find_parametr('Graphics')
 videocard, videocard_full = str, str
-if list_goods[4].split(' ')[:1][0] == "Integrated":
+if list_goods[tmp_ind].split(' ')[:1][0] == "Integrated":
     videocard = 'встроенная'
     videocard_full = list_goods[4][11:]
 else:
     videocard = "дискретная"
     videocard_full = list_goods[4]
-matrix = list_goods[37].split(' ')[3]
-fingerprint = list_goods[72]
+tmp_ind = find_parametr('Display')
+matrix = list_goods[tmp_ind].split(' ')[3]
+tmp_ind = find_parametr('Fingerprint Reader')
+fingerprint = list_goods[tmp_ind]
+tmp_ind = find_parametr('Keyboard')
 keyboard_backlit = str
-if list_goods[41].split(' ')[:1][0] == 'Non-backlit,':
+if list_goods[tmp_ind].split(' ')[:1][0] == 'Non-backlit,':
     keyboard_backlit = 'без подсветки'
 else:
     keyboard_backlit = list_goods[41]
+tmp_ind = find_parametr('Case Material')
 case_material = str
-if list_goods[47][:2] == 'PC':
+if list_goods[tmp_ind][:2] == 'PC':
     case_material = 'пластик'
 else:
     case_material = list_goods[47]
-sensor_screen = list_goods[39]
-case_color = list_goods[43]
-weight = list_goods[51]
-wdh = list_goods[49]
-proc_freq = list_goods[2].split(' ')[12][:-1]
-ddr_type = list_goods[8][16:20]
-ddr_freq = list_goods[8][-4:]
-storage_configuration = list_goods[14].split(' ')[1]
+tmp_ind = find_parametr('Touchscreen')
+sensor_screen = list_goods[tmp_ind]
+tmp_ind = find_parametr('Case Color')
+case_color = list_goods[tmp_ind]
+tmp_ind = find_parametr('Weight')
+weight = list_goods[tmp_ind]
+tmp_ind = find_parametr('Dimensions (WxDxH)')
+wdh = list_goods[tmp_ind]
+tmp_ind = find_parametr('Processor')
+proc_freq = list_goods[tmp_ind].split(' ')[12][:-1]
+tmp_ind = find_parametr('Memory')
+ddr_type = list_goods[tmp_ind][16:20]
+ddr_freq = list_goods[tmp_ind][-4:]
+tmp_ind = find_parametr('Storage')
+storage_configuration = list_goods[tmp_ind].split(' ')[1]
 interfaces = find_char("Standard Ports", "Security Chip")
-wireless_connection = list_goods[61]
-wifi = " ".join(x for x in list_goods[61].split(' ')[:2])[:-1] #распаковка списка, соединенная пробелом
-bluetooth = list_goods[61].split(' ')[-1]
-optical = list_goods[22]
+tmp_ind = find_parametr('WLAN + Bluetooth')
+wireless_connection = list_goods[tmp_ind]
+wifi = " ".join(x for x in list_goods[tmp_ind].split(' ')[:2])[:-1] #распаковка списка, соединенная пробелом
+bluetooth = list_goods[tmp_ind].split(' ')[-1]
+tmp_ind = find_parametr('Optical')
+optical = list_goods[tmp_ind]
 width = str(round(float(wdh.split(' ')[0]) / 10, 1)) + " см" # сделал сокращение до 1 знака после запятой
 depth = str(round(float(wdh.split(' ')[2]) / 10, 1)) + " см" # сделал сокращение до 1 знака после запятой
 height = str(round(float(wdh.split(' ')[4]) / 10, 1)) + " см" # сделал сокращение до 1 знака после запятой
 wdn_cm = width + ' ' + depth + ' ' + height
 
-print('res = ', oper_sist)
+
+print(ddr)
 
 print(wdh)

@@ -97,7 +97,8 @@ def get_good_data(model: str) -> None:
         print(ex)
 
 
-get_good_data('82X70045RK')
+# get_good_data('82X70045RK')
+# get_good_data('21C10000UE')
 # open_page('82X70045RK')
 # open_page('21C10000UE')
 
