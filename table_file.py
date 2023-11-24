@@ -18,8 +18,8 @@ def find_char(onset: str, end: str) -> str:
     return result
 
 def find_parametr(name: str) -> int:
+    "ищет параметр в файле, возвращает индекс следующей строки"
     i = 0
-    print('name = ', name)
     with open('table_good.txt', 'r', encoding='utf-8') as file:
 
         while True:
@@ -27,7 +27,7 @@ def find_parametr(name: str) -> int:
             i += 1
             if not line:
                 break
-            if line == name:
+            if line == name + "\n":
                 return i
 
 list_goods = []
@@ -39,9 +39,12 @@ with open('table_good.txt', 'r', encoding='utf-8') as file:
         list_goods.append(line[:-1])
 print(len(list_goods))
 print(list_goods)
-processor = list_goods[2].split(",")[0] + list_goods[2].split(',')[1][:3] + " ядер"
-screen = list_goods[37].split(' ')[0] + " " +  list_goods[37].split(' ')[2][1:-1]
-oper_sist = list_goods[54]
+tmp_ind = find_parametr('Processor')
+processor = list_goods[tmp_ind].split(",")[0] + list_goods[tmp_ind].split(',')[1][:3] + " ядер"
+tmp_ind = find_parametr('Display')
+screen = list_goods[tmp_ind].split(' ')[0] + " " +  list_goods[tmp_ind].split(' ')[2][1:-1]
+tmp_ind = find_parametr('Operating System')
+oper_sist = list_goods[tmp_ind]
 ddr = list_goods[8][:4]
 hdd = " ".join(str(x) for x in list_goods[14].split(' ')[:3]) # тут я распаковываю список из первых трех элементов строки, соединяя их пробелом
 videocard, videocard_full = str, str
@@ -81,7 +84,6 @@ depth = str(round(float(wdh.split(' ')[2]) / 10, 1)) + " см" # сделал с
 height = str(round(float(wdh.split(' ')[4]) / 10, 1)) + " см" # сделал сокращение до 1 знака после запятой
 wdn_cm = width + ' ' + depth + ' ' + height
 
-print('res = ', find_parametr('Processor'))
+print('res = ', oper_sist)
 
-print(processor)
 print(wdh)
