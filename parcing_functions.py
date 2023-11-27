@@ -96,6 +96,9 @@ def get_good_data(model: str) -> None:
     except Exception as ex:
         print(ex)
 
+def test_parcing(url: str):
+    "функция для тестовых парсингов"
+    driver.get(url)
 
 # get_good_data('82X70045RK')
 # get_good_data('21C10000UE')
