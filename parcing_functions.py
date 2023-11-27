@@ -99,6 +99,50 @@ def get_good_data(model: str) -> None:
 def test_parcing(url: str):
     "функция для тестовых парсингов"
     driver.get(url)
+    table = driver.find_element(By.XPATH, '//*[@id="product-tabs-0"]/div/div[2]')
+    print(table.text)
+    with open('test_parcing.txt', 'w', encoding='utf-8') as file0:
+        file0.write('')
+    for i in table.text:
+        with open('test_parcing.txt', 'a', encoding='utf-8') as file:
+            file.write(i)
+    time.sleep(66)
+
+def index_txt_file():
+    """функция проходится построчно по файлу и создает такой же файл, но с индексом строчки в начале
+    это нужно просто для личного удобства"""
+    with open('index_test_parcing.txt', 'w', encoding='utf-8') as file0:
+        file0.write('')
+    with open('test_parcing.txt', 'r', encoding='utf-8') as file0:
+        with open('index.test_pacing.txt', 'a', encoding='utf-8') as file:
+            i = 0
+            while True:
+                tmp_string = file0.readline()
+                if tmp_string == '':
+                    break
+                print(i, tmp_string)
+                # file.write('[' + str[i] + ']' + str(tmp_string) + '\n')
+                # file.write(str('[' + str[i] + ']' + '\n'))
+                i += 1
+
+def test_parcing2(url: str):
+    "функция для тестовых парсингов"
+    driver.get(url)
+    table = driver.find_element(By.XPATH, '//*[@id="content"]/div/div[3]/div/div[2]/div/div/div[2]')
+    print(table.text)
+    with open('test_parcing2.txt', 'w', encoding='utf-8') as file0:
+        file0.write('')
+    for i in table.text:
+        with open('test_parcing2.txt', 'a', encoding='utf-8') as file:
+            file.write(i)
+    time.sleep(66)
+
+test_url = 'https://neon-night.ru/product/girlyanda-aysikl-bakhroma-svetodiodnyy-4-8-kh-0-6-m-belyy-provod-230-v-diody-teplyy-belyy-152-led/?ysclid=lpgkqtoq4d846110551'
+
+test_url2 = 'https://funpay.com/chips/193/'
+test_parcing2(test_url2)
+# test_parcing(test_url)
+# index_txt_file()
 
 # get_good_data('82X70045RK')
 # get_good_data('21C10000UE')
