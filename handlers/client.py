@@ -30,7 +30,11 @@ async def load_good(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
         data['good'] = message.text
     await message.reply("товар загружен " + data["good"])
-    print(data['good'])
+    new_good = data['good']
+    print(new_good)
+    parcing_functions.get_good_data(new_good)
+    time.sleep(15)
+    await bot.send_message(message.from_user.id, 'новый товар доступен')
     await state.finish()
 
 async def button1(messgage : types.Message):
