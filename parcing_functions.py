@@ -115,14 +115,15 @@ def index_txt_file():
     with open('index_test_parcing.txt', 'w', encoding='utf-8') as file0:
         file0.write('')
     with open('test_parcing.txt', 'r', encoding='utf-8') as file0:
-        with open('index.test_pacing.txt', 'a', encoding='utf-8') as file:
+        with open('index_test_parcing.txt', 'a', encoding='utf-8') as file:
             i = 0
             while True:
                 tmp_string = file0.readline()
+                print('tmp_string = ', tmp_string)
                 if tmp_string == '':
                     break
                 print(i, tmp_string)
-                # file.write('[' + str[i] + ']' + str(tmp_string) + '\n')
+                file.write('[' + str(i) + '] ' + str(tmp_string) + '\n')
                 # file.write(str('[' + str[i] + ']' + '\n'))
                 i += 1
 
@@ -131,8 +132,8 @@ def index_txt_file():
 test_url = 'https://neon-night.ru/product/girlyanda-aysikl-bakhroma-svetodiodnyy-4-8-kh-0-6-m-belyy-provod-230-v-diody-teplyy-belyy-152-led/?ysclid=lpgkqtoq4d846110551'
 
 
-test_parcing(test_url)
-# index_txt_file()
+# test_parcing(test_url)
+index_txt_file()
 
 # get_good_data('82X70045RK')
 # get_good_data('21C10000UE')
