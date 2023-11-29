@@ -112,6 +112,7 @@ def test_parcing(url: str):
 def index_txt_file():
     """функция проходится построчно по файлу и создает такой же файл, но с индексом строчки в начале
     это нужно просто для личного удобства"""
+    list_even = []
     with open('index_test_parcing.txt', 'w', encoding='utf-8') as file0:
         file0.write('')
     with open('test_parcing.txt', 'r', encoding='utf-8') as file0:
@@ -123,9 +124,15 @@ def index_txt_file():
                 if tmp_string == '':
                     break
                 print(i, tmp_string)
+                if i % 2 == 0:
+                    list_even.append('[' + str(i) + '] ' + tmp_string[:-1])
+
                 file.write('[' + str(i) + '] ' + str(tmp_string) + '\n')
                 # file.write(str('[' + str[i] + ']' + '\n'))
                 i += 1
+
+    for i in list_even:
+        print("i = ", i)
 
 
 
