@@ -157,12 +157,6 @@ async def button_25height(message: types.Message):
     await message.delete()
 
 
-
-
-
-
-
-
 def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(commands_start, commands=['start'])
     dp.register_message_handler(cm_start, commands=['Загрузить'])

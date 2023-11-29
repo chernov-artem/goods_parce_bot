@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
 import time
 import requests
 import os
@@ -125,23 +126,12 @@ def index_txt_file():
                 # file.write(str('[' + str[i] + ']' + '\n'))
                 i += 1
 
-def test_parcing2(url: str):
-    "функция для тестовых парсингов"
-    driver.get(url)
-    table = driver.find_element(By.XPATH, '//*[@id="content"]/div/div[3]/div/div[2]/div/div/div[2]')
-    print(table.text)
-    with open('test_parcing2.txt', 'w', encoding='utf-8') as file0:
-        file0.write('')
-    for i in table.text:
-        with open('test_parcing2.txt', 'a', encoding='utf-8') as file:
-            file.write(i)
-    time.sleep(66)
+
 
 test_url = 'https://neon-night.ru/product/girlyanda-aysikl-bakhroma-svetodiodnyy-4-8-kh-0-6-m-belyy-provod-230-v-diody-teplyy-belyy-152-led/?ysclid=lpgkqtoq4d846110551'
 
-test_url2 = 'https://funpay.com/chips/193/'
-test_parcing2(test_url2)
-# test_parcing(test_url)
+
+test_parcing(test_url)
 # index_txt_file()
 
 # get_good_data('82X70045RK')
