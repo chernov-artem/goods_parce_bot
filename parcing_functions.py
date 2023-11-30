@@ -100,7 +100,7 @@ def get_good_data(model: str) -> None:
 def test_parcing(url: str):
     "функция для тестовых парсингов"
     driver.get(url)
-    table = driver.find_element(By.XPATH, '//*[@id="product-tabs-0"]/div/div[2]')
+    table = driver.find_element(By.XPATH, '//*[@id="tab-specification"]')
     print(table.text)
     with open('test_parcing.txt', 'w', encoding='utf-8') as file0:
         file0.write('')
@@ -136,11 +136,11 @@ def index_txt_file():
 
 
 
-test_url = 'https://neon-night.ru/product/girlyanda-aysikl-bakhroma-svetodiodnyy-4-8-kh-0-6-m-belyy-provod-230-v-diody-teplyy-belyy-152-led/?ysclid=lpgkqtoq4d846110551'
+test_url = 'https://schaublorenz.ru/dukhovoy-shkaf-schaub-lorenz-slb-el6418/?ysclid=lpkxslvutw834265133'
 
 
 # test_parcing(test_url)
-index_txt_file()
+# index_txt_file()
 
 # get_good_data('82X70045RK')
 # get_good_data('21C10000UE')
