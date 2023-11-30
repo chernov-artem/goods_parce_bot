@@ -1,114 +1,73 @@
-PERFORMANCE
-Processor
-Intel® Core™ i5-1235U, 10C (2P + 8E) / 12T, P-core 1.3 / 4.4GHz, E-core 0.9 / 3.3GHz, 12MB
-Graphics
-Integrated Intel® Iris® Xe Graphics Functions as UHD Graphics
-Chipset
-Intel® SoC Platform
-Memory
-1x 8GB SO-DIMM DDR4-3200
-Memory Slots
-Two DDR4 SO-DIMM slots, dual-channel capable
-Max Memory
-Up to 64GB DDR4-3200
-Storage
-512GB SSD M.2 2242 PCIe® 4.0x4 NVMe® Opal 2.0
-Storage Support
-One drive, up to 1TB M.2 2242 SSD
-Storage Slot
-One M.2 2242 PCIe® 4.0 x4 slot
-Card Reader
-MicroSD Card Reader
-Optical
-None
-Audio Chip
-High Definition (HD) Audio, Realtek® ALC3287 codec
-Speakers
-Stereo speakers, 2W x2, Dolby® Audio™
-Camera
-HD 720p with Privacy Shutter
-Microphone
-2x, Array
-Battery
-Integrated 42Wh
-Power Adapter
-65W USB-C® (3-pin)
-DESIGN
-Display
-14" FHD (1920x1080) IPS 250nits Anti-glare, 45% NTSC
-Touchscreen
-None
-Keyboard
-Non-backlit, English (UK)
-Case Color
-Thunder Black
-Case Material
-PC-ABS (Top), PC-CF (Bottom)
-Dimensions (WxDxH)
-325.4 x 217 x 19.63 mm (12.81 x 8.54 x 0.77 inches)
-Weight
-Starting at 1.39 kg (3.06 lbs)
-SOFTWARE
-Operating System
-None
-Bundled Software
-None
-CONNECTIVITY
-Ethernet
-100/1000M (RJ-45)
-WLAN + Bluetooth
-Intel® Wi-Fi® 6 AX201, 11ax 2x2 + BT5.1
-WWAN
-WWAN Upgradable to 4G
-SIM Card
-None
-NFC
-None
-Standard Ports
-1x Ethernet (RJ-45)
-1x HDMI® 2.1, up to 4K/60Hz
-1x Headphone / microphone combo jack (3.5mm)
-1x Thunderbolt™ 4 / USB4® 40Gbps (support data transfer, Power Delivery 3.0 and DisplayPort™ 1.4)
-1x USB 3.2 Gen 1
-1x USB 3.2 Gen 1 (Always On)
-1x USB-C® 3.2 Gen 1 (support data transfer, Power Delivery 3.0 and DisplayPort™ 1.4)
-1x microSD card reader
-Optional Ports (configured)
-1x Nano-SIM Card Slot
-1x Smart Card Reader
-Docking
-Various docking solutions supported via Thunderbolt™ or USB-C®.
-For more compatible docking solutions, please visit Docking for ThinkPad® L14 Gen 3 (Intel®)
-Monitor Cable
-None
-SECURITY & PRIVACY
-Smart Card Reader
-Smart Card Reader
-Security Chip
-Discrete TPM 2.0 Enabled
-Fingerprint Reader
-Touch Style, Match-on-Chip, Integrated in Power Button
-Physical Locks
-Kensington® Nano Security Slot™, 2.5 x 6 mm
-Other Security
-Camera privacy shutter
-Glance by Mirametrix®
-Tile ready
-MANAGEABILITY
-System Management
-Non-vPro®
-SERVICE
-Base Warranty
-3-year, Courier or Carry-in
-Included Upgrade
-None
-ACCESSORIES
-Bundled Accessories
-None
-CERTIFICATIONS
-Green Certifications
-ErP Lot 3
-RoHS compliant
-TCO Certified
-Mil-Spec Test
-MIL-STD-810H military test passed
+ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+Тип управления
+механическое
+Объем духовки, л
+73
+Дисплей
+есть
+Класс энергоэффективности
+A
+Материал панели управления
+стекло
+Тип внутреннего покрытия
+Эмаль легкой очистки Easy Clean
+Максимальная температура, °C
+250
+Мощность подключения, кВт
+2,5
+Мощность гриля, кВт
+2450
+Таймер
+есть
+Комплектация
+Хромированная решетка, Универсальный противень с антипригарным покрытием Easy Clean
+Гарантия, мес
+12
+Страна разработки
+Германия
+Страна производства
+Турция
+ФУНКЦИИ И ОСОБЕННОСТИ
+Утапливаемые переключатели
+есть
+Телескопические направляющие, 1 ряд
+есть
+Тип направляющих
+хромированные
+Количество стекол
+2
+Съемное стекло для легкой очистки
+есть
+Тип очистки духовки
+традиционная
+Подсветка камеры
+есть
+Часы
+есть
+ПРОГРАММЫ И РЕЖИМЫ
+Кол-во режимов приготовления
+8
+Гриль
+есть
+Конвекция (Вентилятор)
+есть
+Размораживание
+есть
+Дополнительные функции
+Различные комбинации вариантов нагрева и конвекции
+ГАБАРИТЫ, ВЕС И ЦВЕТ
+Габариты (ШхГхВ), мм
+595x567x595
+Размер ниши для встраивания в столешницу (ШхГхВ), мм
+560х550х600
+Вес, кг
+29
+Размер ниши для встраивания в колонну (ШхГхВ), мм
+560х550х600
+Цвет панели управления
+белый
+ДОПОЛНИТЕЛЬНО
+Наличие шнура питания
+есть
+Наличие вилки
+есть

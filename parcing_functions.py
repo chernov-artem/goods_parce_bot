@@ -102,10 +102,10 @@ def test_parcing(url: str):
     driver.get(url)
     table = driver.find_element(By.XPATH, '//*[@id="tab-specification"]')
     print(table.text)
-    with open('test_parcing.txt', 'w', encoding='utf-8') as file0:
+    with open('table_good.txt', 'w', encoding='utf-8') as file0:
         file0.write('')
     for i in table.text:
-        with open('test_parcing.txt', 'a', encoding='utf-8') as file:
+        with open('table_good.txt', 'a', encoding='utf-8') as file:
             file.write(i)
     time.sleep(66)
 
