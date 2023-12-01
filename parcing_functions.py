@@ -100,7 +100,7 @@ def get_good_data(model: str) -> None:
 def test_parcing(url: str):
     "функция для тестовых парсингов"
     driver.get(url)
-    table = driver.find_element(By.XPATH, '//*[@id="tab-specification"]')
+    table = driver.find_element(By.XPATH, '/html/body/div[2]/section/main/section[2]')
     print(table.text)
     with open('table_good.txt', 'w', encoding='utf-8') as file0:
         file0.write('')
@@ -115,7 +115,7 @@ def index_txt_file():
     list_even = []
     with open('index_test_parcing.txt', 'w', encoding='utf-8') as file0:
         file0.write('')
-    with open('test_parcing.txt', 'r', encoding='utf-8') as file0:
+    with open('table_good.txt', 'r', encoding='utf-8') as file0:
         with open('index_test_parcing.txt', 'a', encoding='utf-8') as file:
             i = 0
             while True:
@@ -136,11 +136,11 @@ def index_txt_file():
 
 
 
-test_url = 'https://schaublorenz.ru/dukhovoy-shkaf-schaub-lorenz-slb-el6418/?ysclid=lpkxslvutw834265133'
+test_url = 'https://www.irbis.su/category/portable/notebooks/product/834?ysclid=lpmgw31ibg790704239'
 
 
 # test_parcing(test_url)
-# index_txt_file()
+index_txt_file()
 
 # get_good_data('82X70045RK')
 # get_good_data('21C10000UE')
