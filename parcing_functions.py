@@ -140,7 +140,7 @@ test_url = 'https://www.irbis.su/category/portable/notebooks/product/834?ysclid=
 
 
 # test_parcing(test_url)
-index_txt_file()
+# index_txt_file()
 
 # get_good_data('82X70045RK')
 # get_good_data('21C10000UE')

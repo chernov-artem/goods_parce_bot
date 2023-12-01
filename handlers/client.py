@@ -16,6 +16,7 @@ class FSM_goods(StatesGroup):
 
 
 async def commands_start(message : types.Message):
+    "функция старта"
     try:
         await bot.send_message(message.from_user.id, 'Готов к работе', reply_markup=kb_client)
         await message.delete()
@@ -23,17 +24,20 @@ async def commands_start(message : types.Message):
         await message.reply("Общение с ботов в ЛС. Напишите ему http://t.me/spb97192568_test_pizza_bot")
 
 async def cm_start(message : types.Message):
+    "функция старта машины состояний"
     await bot.send_message(message.from_user.id, "функция работает")
     await FSM_goods.good.set()
 
 async def load_good(message: types.Message, state: FSMContext):
+    "функция загружает новый товар по ссылке"
     async with state.proxy() as data:
         data['good'] = message.text
-    await message.reply("товар загружен " + data["good"])
+    await message.reply("загружаю товар " + data["good"])
     new_good = data['good']
     print(new_good)
-    parcing_functions.get_good_data(new_good)
-    time.sleep(15)
+    parcing_functions.test_parcing(new_good)
+    # parcing_functions.get_good_data(new_good)
+    time.sleep(5)
     await bot.send_message(message.from_user.id, 'новый товар доступен')
     await state.finish()
 
