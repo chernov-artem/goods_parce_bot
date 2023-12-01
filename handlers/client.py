@@ -51,11 +51,15 @@ async def button3(message: types.Message):
     await message.delete()
 
 async def button4(message: types.Message):
-    await bot.send_message(message.from_user.id, "тов11_15", reply_markup=kb_notebook4)
+    await bot.send_message(message.from_user.id, "тов16_20", reply_markup=kb_notebook4)
     await message.delete()
 
 async def button5(message: types.Message):
-    await bot.send_message(message.from_user.id, "тов11_15", reply_markup=kb_notebook5)
+    await bot.send_message(message.from_user.id, "тов21_25", reply_markup=kb_notebook5)
+    await message.delete()
+
+async def button6(message: types.Message):
+    await bot.send_message(message.from_user.id, "тов25_30", reply_markup=kb_notebook6)
     await message.delete()
 
 async def button_1item(message: types.Message):
@@ -158,6 +162,25 @@ async def button_25item(message: types.Message):
     await bot.send_message(message.from_user.id, "25 пункт:\n" + table_file.item25)
     await message.delete()
 
+async def button_26item(message: types.Message):
+    await bot.send_message(message.from_user.id, "26 пункт:\n" + table_file.item26)
+    await message.delete()
+
+async def button_27item(message: types.Message):
+    await bot.send_message(message.from_user.id, "27 пункт:\n" + table_file.item27)
+    await message.delete()
+
+async def button_28item(message: types.Message):
+    await bot.send_message(message.from_user.id, "28 пункт:\n" + table_file.item28)
+    await message.delete()
+
+async def button_29item(message: types.Message):
+    await bot.send_message(message.from_user.id, "29 пункт:\n" + table_file.item29)
+    await message.delete()
+
+async def button_30item(message: types.Message):
+    await bot.send_message(message.from_user.id, "30 пункт:\n" + table_file.item30)
+    await message.delete()
 
 def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(commands_start, commands=['start'])
@@ -168,6 +191,7 @@ def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(button3, commands=['тов11_15'])
     dp.register_message_handler(button4, commands=['тов16_20'])
     dp.register_message_handler(button5, commands=['тов21_25'])
+    dp.register_message_handler(button6, commands=['тов26_30'])
     dp.register_message_handler(button_1item, commands=['1_пункт'])
     dp.register_message_handler(button_2item, commands=['2_пункт'])
     dp.register_message_handler(button_3item, commands=['3_пункт'])
@@ -193,3 +217,8 @@ def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(button_23item, commands=['23_пункт'])
     dp.register_message_handler(button_24item, commands=['24_пункт'])
     dp.register_message_handler(button_25item, commands=['25_пункт'])
+    dp.register_message_handler(button_26item, commands=['26_пункт'])
+    dp.register_message_handler(button_27item, commands=['27_пункт'])
+    dp.register_message_handler(button_28item, commands=['28_пункт'])
+    dp.register_message_handler(button_29item, commands=['29_пункт'])
+    dp.register_message_handler(button_30item, commands=['30_пункт'])

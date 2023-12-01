@@ -9,7 +9,7 @@ def find_interval(onset: str, end: str) -> tuple:
     return (onset_index, end_index)
 
 def find_char(onset: str, end: str) -> str:
-    "функция возвращает строку между начальным и конечным элементом списка"
+    "функция возвращает строку между начальным и конечным элементом списка. Входные данные содержание строчек(не индексы)"
     interval = find_interval(onset, end)
     onset_index, end_index = interval[0], interval[1]
     result = ''
@@ -39,31 +39,40 @@ with open('table_good.txt', 'r', encoding='utf-8') as file:
         list_goods.append(line[:-1])
 print(len(list_goods))
 print(list_goods)
-item1 = list_goods[3] + ' ' +  list_goods[4]
-item2 = list_goods[49] + ' ' +  list_goods[50]
-item3 = list_goods[51] + ' ' +  list_goods[52]
-item4 = 'функция СВЧ - хз, в таблице ничего нет'
-item5 = "хуй 5"
-item6 = "хуй 6"
-item7 = "хуй 7"
-item8 =  "хуй 8"
-item9 =  "хуй 9"
-item10 =  "хуй 10"
-item11 =  "хуй 11"
-item12 =  "хуй 12"
-item13 =  "хуй 13"
-item14 =  "хуй 14"
-item15 =  "хуй 15"
-item16 =  "хуй 16"
-item17 =  "хуй 17"
-item18 =  "хуй 18"
-item19 =  "хуй 19"
-item20 =  "хуй 20"
-item21 =  "хуй 21"
-item22 =  "хуй 22"
-item23 =  "хуй 23"
-item24 =  "хуй 24"
-item25 = 'хуй 25'
+item1 = list_goods[58]
+item2 = list_goods[14]
+item3 = list_goods[13] + ' ' +  list_goods[14] + ' ' + list_goods[15]
+item4 = list_goods[16]
+item5 = list_goods[25]
+item6 = list_goods[23]
+item7 = list_goods[11]
+item8 =  list_goods[21]
+item9 =  list_goods[20]
+item10 =  'оптический привод: нет данных'
+item11 =  list_goods[46]
+item12 =  list_goods[51]
+item13 =  list_goods[7]
+item14 =  list_goods[62]
+item15 =  list_goods[9]
+item16 =  list_goods[28]
+item17 =  list_goods[10]
+item18 =  'сканер отпечатков: нет данных'
+item19 =  list_goods[57]
+item20 =  'сенсорный экран: нет данных'
+item21 =  'частота экрана: нет данных'
+item22 =  'общий объем накопителей: нет данных'
+item23 =  list_goods[18]
+item24 =  list_goods[24]
+item25 = list_goods[27]
+item26 = find_char('МУЛЬТИМЕДИА', 'КЛАВИАТУРА')
+item27 = list_goods[32] + ' ' + list_goods[33]
+item28 = list_goods[60]
+item29 = list_goods[59]
+item30 = list_goods[61]
+
+
+# print('item26 = ', item26)
+
 
 # item6 = list_goods[] + ' ' +  list_goods[]
 # item7 =list_goods[] + ' ' +  list_goods[]
@@ -87,7 +96,7 @@ item25 = 'хуй 25'
 # item25 = list_goods[] + ' ' +  list_goods[]
 # item2 = list_goods[] + ' ' +  list_goods[]
 
-print(item4)
+
 
 # tmp_ind = find_parametr('Processor')
 # processor = list_goods[tmp_ind].split(",")[0] + list_goods[tmp_ind].split(',')[1][:3] + " ядер"
