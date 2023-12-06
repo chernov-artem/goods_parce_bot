@@ -100,7 +100,7 @@ def get_good_data(model: str) -> None:
 def test_parcing(url: str):
     "функция для тестовых парсингов"
     driver.get(url)
-    table = driver.find_element(By.XPATH, '/html/body/div[2]/section/main/section[2]')
+    table = driver.find_element(By.XPATH, '//*[@id="as_SpecData"]')
     print(table.text)
     with open('table_good.txt', 'w', encoding='utf-8') as file0:
         file0.write('')
@@ -136,7 +136,7 @@ def index_txt_file():
 
 
 
-test_url = 'https://www.irbis.su/category/portable/notebooks/product/834?ysclid=lpmgw31ibg790704239'
+test_url ='https://psref.lenovo.com/Detail/IdeaPad_Slim_3_15IRU8?M=82X70045RK'
 
 
 # test_parcing(test_url)

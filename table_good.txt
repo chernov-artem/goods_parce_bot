@@ -1,65 +1,92 @@
-ВСЕ ХАРАКТЕРИСТИКИ
-ОБЩЕЕ
-Модель 15NBP3508
-Серия Smart
-Сделано в России Нет
-МИНПРОМТОРГ Нет
-ОПЕРАЦИОННАЯ СИСТЕМА
-Операционная система Windows 11 Professional
-ЭКРАН
-Диагональ 15.6 "
-Тип экрана IPS
-Разрешение 1920 × 1080 (Full HD)
-ПРОЦЕССОР
-Производитель INTEL
-Поколение Core i5
-Модель 1235U
-Количество ядер 10
-Количество потоков 12
-Частота процессора, базовая 0.9 ГГц
-Частота процессора, макс. 4.4 ГГц
-Графика Интегрированная
-Графический процессор Intel Iris Xe
-ОПЕРАТИВНАЯ ПАМЯТЬ
-Тип памяти DDR4
-Частота 3200 МГц
-Объем 16 Гб
-ВСТРОЕННАЯ ПАМЯТЬ
-Тип накопителя SSD
-Объем накопителя 512 Гб
-Порт накопителя М2 2280 PCIe/SATA
-Слоты расширения 2.5" SATA
-ПЕРЕДАЧА ДАННЫХ
-Модуль связи WiFi Wi-Fi 6 (802.11 ax)
-Bluetooth 5.2
-МУЛЬТИМЕДИА
-Камера фронтальная 2 МП
-Количество динамиков 2
-Мощность динамиков 1 W
-Микрофон Да
-ПОРТЫ И РАЗЪЕМЫ
-M2 PCIe 1
-SATA III (2.5") 1
-USB 2.0 1
-USB 3.2 Gen1 2
-USB TYPE C 2
-HDMI 1
-Картридер MicroSD до 512Gb
-RJ-45 1
-Совмещенный аудиоразъём (для наушников и микрофона) 1
-Kensington lock 1
-КЛАВИАТУРА
-Подсветка клавиш 2х-уровневая
-Защита от воды Да
-ПИТАНИЕ
-Тип аккумулятора Li-Ion Polymer
-Емкость аккумулятора 5300 мАч
-КОРПУС
-Материал Металл + пластик
-Цвет корпуса Светло-серый
-Высота 232.8 мм
-Ширина 359 мм
-Толщина 18.7 мм
-Вес 1770 гр
-ГАРАНТИЯ
-Гарантия 3 года
+PERFORMANCE
+Processor
+Intel® Core™ i5-1335U, 10C (2P + 8E) / 12T, P-core 1.3 / 4.6GHz, E-core 0.9 / 3.4GHz, 12MB
+Graphics
+Integrated Intel® Iris® Xe Graphics
+Chipset
+Intel® SoC Platform
+Memory
+16GB Soldered LPDDR5-4800
+Memory Slots
+Memory soldered to systemboard, no slots, dual-channel (16GB models)
+Max Memory
+16GB soldered memory, not upgradable
+Storage
+512GB SSD M.2 2242 PCIe® 4.0x4 NVMe®
+Storage Support
+One drive, up to 1TB M.2 2242 SSD
+Storage Slot
+One M.2 PCIe® 4.0 x4 slot (M.2 SSD models)
+Card Reader
+SD Card Reader
+Optical
+None
+Audio Chip
+High Definition (HD) Audio
+Speakers
+User-facing stereo speakers, 1.5W x2, optimized with Dolby® Audio™
+Camera
+FHD 1080p with Privacy Shutter
+Microphone
+2x, Array
+Battery
+Integrated 47Wh
+Power Adapter
+65W Round Tip (3-pin)
+DESIGN
+Display
+15.6" FHD (1920x1080) IPS 300nits Anti-glare
+Touchscreen
+None
+Keyboard
+Non-backlit, Russian
+Case Color
+Arctic Grey
+Surface Treatment
+IMR (In-Mold Decoration by Roller)
+Case Material
+PC-ABS (Top), PC-ABS (Bottom)
+Dimensions (WxDxH)
+359.3 x 235 x 17.9 mm (14.15 x 9.25 x 0.70 inches)
+Weight
+Starting at 1.62 kg (3.57 lbs)
+SOFTWARE
+Operating System
+None
+Bundled Software
+None
+CONNECTIVITY
+Ethernet
+No Onboard Ethernet
+WLAN + Bluetooth
+Wi-Fi® 6, 11ax 2x2 + BT5.1
+Standard Ports
+1x Card reader
+1x HDMI® 1.4
+1x Headphone / microphone combo jack (3.5mm)
+1x Power connector
+1x USB-C® 3.2 Gen 1 (support data transfer, Power Delivery and DisplayPort™ 1.2)
+2x USB 3.2 Gen 1
+Security Chip
+Firmware TPM 2.0 Enabled
+Fingerprint Reader
+None
+Other Security
+Camera privacy shutter
+SERVICE
+Base Warranty
+1-year, Courier or Carry-in
+Included Upgrade
+2Y Courier/Carry-in upgrade from 1Y Courier/Carry-in
+ACCESSORIES
+Bundled Accessories
+None
+CERTIFICATIONS
+Green Certifications
+ErP Lot 26
+ErP Lot 6
+RoHS compliant
+Other Certifications
+TÜV Rheinland® Low Blue Light (Software Solution)
+Mil-Spec Test
+MIL-STD-810H military test passed (21 test items)

@@ -39,39 +39,39 @@ with open('table_good.txt', 'r', encoding='utf-8') as file:
         list_goods.append(line[:-1])
 print(len(list_goods))
 print(list_goods)
-item1 = list_goods[58]
-item2 = list_goods[14]
-item3 = list_goods[13] + ' ' +  list_goods[14] + ' ' + list_goods[15]
-item4 = list_goods[16]
-item5 = list_goods[25]
-item6 = list_goods[23]
-item7 = list_goods[11]
-item8 =  list_goods[21]
-item9 =  list_goods[20]
-item10 =  'оптический привод: нет данных'
-item11 =  list_goods[46]
-item12 =  list_goods[51]
-item13 =  list_goods[7]
-item14 =  list_goods[62]
-item15 =  list_goods[9]
-item16 =  list_goods[28]
-item17 =  list_goods[10]
-item18 =  'сканер отпечатков: нет данных'
-item19 =  list_goods[57]
-item20 =  'сенсорный экран: нет данных'
-item21 =  'частота экрана: нет данных'
-item22 =  'общий объем накопителей: нет данных'
-item23 =  list_goods[18]
-item24 =  list_goods[24]
-item25 = list_goods[27]
-item26 = find_char('МУЛЬТИМЕДИА', 'КЛАВИАТУРА')
-item27 = list_goods[32] + ' ' + list_goods[33]
-item28 = list_goods[60]
-item29 = list_goods[59]
-item30 = list_goods[61]
+item1 = list_goods[37]
+item2 = list_goods[2]
+item3 = list_goods[53] + ' ' + list_goods[64]
+item4 = list_goods[12]
+item5 = list_goods[14]
+item6 = list_goods[3] + ' ' + list_goods[4]
+item7 = 'тип матрицы' + list_goods[37]
+item8 = 'количество ядер (cores): ' + list_goods[2].split(' ')[3]
+item9 =  list_goods[71] + ': ' + list_goods[72]
+item10 = list_goods[40] + ': ' + list_goods[41]
+item11 =  list_goods[46] + ': ' + list_goods[47]
+item12 =  list_goods[38] + ': ' + list_goods[39]
+item13 =  'частота обновления экрана: нет данных, скорее всего 60Гц'
+item14 =  list_goods[42] + ': ' + list_goods[43]
+item15 =  list_goods[50] + ': ' + list_goods[51]
+item16 =  list_goods[2]
+item17 =  item6
+item18 =  'тип памяти: ' + list_goods[8].split(' ')[2][2:6]
+item19 =  'частота памяти: ' +  list_goods[8].split(' ')[2][7:]
+item20 =  list_goods[15] + ': ' + list_goods[16]
+item21 = find_char('CONNECTIVITY', 'SERVICE')
+item22 = 'беспроводная связь: ' + list_goods[60]
+item23 =  list_goods[61].split(', ')[0]
+item24 =  list_goods[61].split(' ')[-1]
+item25 = list_goods[0]
+item26 = list_goods[21] + ': ' + list_goods[22]
+item27 = 'ширина: ' +  str(list_goods[49].split(' ')[0])
+item28 = 'глубина: ' +  str(list_goods[49].split(' ')[2])
+item29 = 'толщина: ' +  str(list_goods[49].split(' ')[4])
+item30 = list_goods[0]
 
 
-# print('item26 = ', item26)
+print('item = ', item29)
 
 
 # item6 = list_goods[] + ' ' +  list_goods[]
